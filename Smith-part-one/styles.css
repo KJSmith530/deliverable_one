@@ -16,9 +16,9 @@ a {
   color: #ff5c0f;
 }
 
-.logo a {
+.logo {
   color: #20a8b4;
-  padding: 5px 15px;
+  padding: 5px 20px;
   text-align: center;
 }
 
@@ -34,6 +34,10 @@ a {
   display: block;
 }
 
+.nav a:hover {
+  color: #ff5c0f;
+}
+
 button {
   background-color: #20a8b4;
   border-radius: 10px;
@@ -42,13 +46,24 @@ button {
   color: #fff;
 }
 
+button:hover {
+  background-color: #ff5c0f;
+  cursor: pointer;
+}
+
 body {
-  padding: 0;
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
 
 .main {
-  display: flex;
-  align-items: center;
+  float: left;
+  padding: 200px 50px 50px 20px;
 }
+
+img {
+  float: right;
+  max-width: 400px;
+  padding: 100px;
+}
+

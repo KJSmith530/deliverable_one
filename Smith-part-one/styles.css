@@ -1,10 +1,10 @@
 .header {
   padding-top: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   background-color: #F2F2F2;
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 a {
@@ -18,20 +18,27 @@ a {
 
 .logo {
   color: #20a8b4;
-  padding: 5px 20px;
-  text-align: center;
+  padding: 10px 10px 5px 10px;
+  text-align: left;
+  /* display: flex; */
+  margin: 0;
 }
 
 .nav {
   display: flex;
+  flex-direction: column;
   list-style: none;
-  align-items: center;
+  /* float: left; */
+  margin: 0;
+  padding-left: 10px;
+  line-height: 25px;
 }
 
 .nav a {
   margin: 1px;
   padding-right: 10px;
   display: block;
+  font-size: 14px;
 }
 
 .nav a:hover {
@@ -44,6 +51,7 @@ button {
   padding: 12px;
   border: none;
   color: #fff;
+  width: 100%;
 }
 
 button:hover {
@@ -57,13 +65,48 @@ body {
 }
 
 .main {
-  float: left;
-  padding: 200px 50px 50px 20px;
+  padding: 60px 10px 0px 10px;
+  line-height: 10px;
+  font-size: 12px;
 }
 
 img {
-  float: right;
   max-width: 400px;
   padding: 100px;
+  display: none;
 }
 
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    align-items: justify;
+  }
+  .nav {
+    flex-direction: row;
+    float: right;
+    align-items: center;
+    padding: 10px;
+  }
+  .nav a {
+    font-size: 16px;
+    display: inline-block;
+  }
+  button {
+    width: auto;
+  }
+  .main {
+    font-size: 18px;
+    line-height: 25px;
+    padding: 200px 15px 0px;
+    float: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  img {
+    display: flex;
+    float: right;
+    padding: 100px 70px 0px 0px;
+    max-width: 600px;
+  }
+}
